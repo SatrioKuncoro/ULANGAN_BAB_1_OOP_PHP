@@ -33,5 +33,14 @@ $obj1 = new Motor(name: 'Vario', id_machine: 1245);
 $obj2 = new Motor(name: 'CB 250', id_machine: 3421, type: 'sport');
 
 echo $obj1->display();
+// output
+// Nama: Vario
+// ID Mesin: 1245
+// Type Motor: automatic
+
+
 echo $obj2->display();
+// Nama: CB 250
+// ID Mesin: 3421
+// Type Motor: sport
 
