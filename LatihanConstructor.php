@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 class Motor {
     // 3 attribute
@@ -11,4 +9,3 @@ class Motor {
         $this->type = $type;
     }
 }
->>>>>>> aa9f9f5775f75b8c4e354390e820ffce6ecfba63
