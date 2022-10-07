@@ -9,6 +9,7 @@ class SuperClass{
         $this->name = $name;
         $this->level = $level;
         $this->is_status = $is_status;
+        self::$index = 1;
     }
 
     public function getName(){
@@ -19,8 +20,16 @@ class SuperClass{
         return $this->level;
     }
 
+    public function getIsStatus(){
+        return $this->is_status;
+    }
+
     public function display(){
         // menampilkan semua nilai
+        echo 'No.' . self::$index++ . '<br>';
+        echo 'Nama: ' . $this->getName() . '<br>';
+        echo 'Level: ' . $this->getLevel() . '<br>';
+        echo 'Status: ' . $this->getIsStatus() . '<br>';
     }
 }
 
@@ -33,3 +42,5 @@ class SUbclass extends SuperClass{
     }
 }
 
+$obj1 = new SuperClass(name: 'Superclass', is_status: false);
+echo $obj1->display();
