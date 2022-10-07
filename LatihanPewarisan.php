@@ -1,14 +1,12 @@
 <?php
+
 class SuperClass{
 // memiliki 4 attribute
-    public $name, $level, $is_status;
+
     public static $index;
 
-    public function __construct($name, $level = 'easy', $is_status)
+    public function __construct(public $level = 'easy', public $is_status, public $name = __CLASS__)
     {
-        $this->name = $name;
-        $this->level = $level;
-        $this->is_status = $is_status;
         self::$index = 1;
     }
 
@@ -33,12 +31,11 @@ class SuperClass{
     }
 }
 
-class SUbclass extends SuperClass{
-    public $type;
+class SubClass extends SuperClass{
 
-    public function __construct($name, $level = 'Medium', $is_status, $type )
+    public function __construct(public $level, public $is_status, public String $type = "Pewarisan", public $name = __CLASS__)
     {
-        parent::__construct($name, $level = 'easy', $is_status);
+        parent::__construct($level = 'Medium', $is_status, $name);
     }
 
     public function getType(){
@@ -47,9 +44,13 @@ class SUbclass extends SuperClass{
 
     public function displaySubClass(){
         $this->display();
-        echo 'Tipe: ' . $this->getType() . '<br>';
+        echo 'Type: ' . $this->getType() . '<br>';
     }
 }
 
-$obj1 = new SuperClass(name: 'Superclass', is_status: false);
+
+
+$obj1 = new SuperClass(level: 'easy', is_status: false);
 echo $obj1->display();
+$obj2 = new SubClass(level: 'Medium', is_status: true, );
+echo $obj2->displaySubClass();
