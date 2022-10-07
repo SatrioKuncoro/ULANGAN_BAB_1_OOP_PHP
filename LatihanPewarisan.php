@@ -40,6 +40,15 @@ class SUbclass extends SuperClass{
     {
         parent::__construct($name, $level = 'easy', $is_status);
     }
+
+    public function getType(){
+        return $this->type;
+    }
+
+    public function displaySubClass(){
+        $this->display();
+        echo 'Tipe: ' . $this->getType() . '<br>';
+    }
 }
 
 $obj1 = new SuperClass(name: 'Superclass', is_status: false);
