@@ -9,3 +9,5 @@ class Motor {
         $this->type = $type;
     }
 }
+
+$obj = new Motor();
