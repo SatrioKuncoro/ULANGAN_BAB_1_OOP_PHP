@@ -10,8 +10,21 @@ class SuperClass{
         $this->level = $level;
         $this->is_status = $is_status;
     }
+
+    public function getName(){
+        return $this->name;
+    }
+
+    public function getLevel(){
+        return $this->level;
+    }
+
+    public function display(){
+        // menampilkan semua nilai
+    }
 }
 
 class SUbclass extends SuperClass{
 
 }
+
