@@ -25,6 +25,11 @@ class SuperClass{
 }
 
 class SUbclass extends SuperClass{
+    public $type;
 
+    public function __construct()
+    {
+        
+    }
 }
 
