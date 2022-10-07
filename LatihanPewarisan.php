@@ -27,9 +27,9 @@ class SuperClass{
 class SUbclass extends SuperClass{
     public $type;
 
-    public function __construct()
+    public function __construct($name, $level = 'Medium', $is_status, $type )
     {
-        
+        parent::__construct($name, $level = 'easy', $is_status);
     }
 }
 
