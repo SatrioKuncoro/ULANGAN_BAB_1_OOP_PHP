@@ -49,7 +49,6 @@ class SubClass extends SuperClass{
 }
 
 
-
 $obj1 = new SuperClass(level: 'easy', is_status: false);
 echo $obj1->display();
 $obj2 = new SubClass(level: 'Medium', is_status: true, );
