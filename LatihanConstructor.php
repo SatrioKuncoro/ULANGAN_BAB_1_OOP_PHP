@@ -1,12 +1,15 @@
 <?php
 class Motor {
     // 3 attribute
-    public $name, $id_machine, $type;
+    // public $name, $id_machine, $type;
 
-    public function __construct($name, $id_machine, $type = 'automatic'){
-        $this->name = $name;
-        $this->id_machine = $id_machine;
-        $this->type = $type;
+    public function __construct(
+        public String $name, 
+        public String $id_machine, 
+        public String $type = 'automatic'){
+        // $this->name = $name;
+        // $this->id_machine = $id_machine;
+        // $this->type = $type;
     }
 
     public function getName(){
